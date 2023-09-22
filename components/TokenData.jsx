@@ -91,7 +91,7 @@ const TokenData = () => {
     };
 
     if (address !== /^0x.*/|| address.trim() !== /^0x.*/) fetchData();
-  }, []);
+  }, [address]);
 
   return (
     <div className="container mx-auto px-4 sm:px-8">
@@ -125,7 +125,7 @@ const TokenData = () => {
 
               <tbody>
                 {tokens.map((token, index) => (
-                  <tr>
+                  <tr key={index}>
                     <td
                       className="px-5 py-5 border-b border-gray-200 bg-white text-sm"
                       key={index}
@@ -205,7 +205,7 @@ const TokenData = () => {
                   // <h1 key={index}>{ nft.name ? nft.name : " "}
                   // <p>{nft.amount}</p>
                   // </h1>
-                  <tr>
+                  <tr key={index}>
                     <td
                       className="px-5 py-5 border-b border-gray-200 bg-white text-sm"
                       key={index}

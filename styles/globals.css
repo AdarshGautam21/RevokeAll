@@ -26,7 +26,7 @@ a {
   display: flex;
   justify-content: center;
   height: 78vh;
-  flex-direction: row;
+  flex-direction: column;
 
 }
 
